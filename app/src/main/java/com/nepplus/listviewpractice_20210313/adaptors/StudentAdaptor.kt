@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.nepplus.listviewpractice_20210313.R
 import com.nepplus.listviewpractice_20210313.datas.Student
 
@@ -37,6 +38,18 @@ class StudentAdaptor(
 //        tempRow는 절대 null이 아닐 것이다 -> 무조건 결과로 나가도 된다
 
         val row = tempRow!!
+
+//  실제 데이터를 꺼내서 > ui 요소들에 반영
+
+//  실제 데이터 변수 => mlist 변수 (목록) 안에 들어있다. => position에 맞는 데이터 추출
+
+        val studentData = mList[position]
+
+//   뿌려질 UI 요소를 가져오자 => row 변수 안에 있는 텍스트뷰 등을 꺼내오자.
+
+        val nameTxt = row.findViewById<TextView>(R.id.nameTxt)
+        val ageTxt = row.findViewById<TextView>(R.id.ageTxt)
+
 
 //        완성된 ROW가 화면에 뿌려질 결과로 선정
 
