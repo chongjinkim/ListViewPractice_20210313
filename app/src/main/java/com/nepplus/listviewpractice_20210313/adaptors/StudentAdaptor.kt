@@ -51,6 +51,7 @@ class StudentAdaptor(
 
         val nameTxt = row.findViewById<TextView>(R.id.nameTxt)
         val ageTxt = row.findViewById<TextView>(R.id.ageTxt)
+        val adressTxt = row.findViewById<TextView>(R.id.addressTxt)
 
 //   실제 데이터 UI 반영
         nameTxt.text = studentData.name
@@ -63,6 +64,7 @@ class StudentAdaptor(
 
         ageTxt.text = "(${koreanAge}세)"
 
+        adressTxt.text = studentData.address
 
 
 //        완성된 ROW가 화면에 뿌려질 결과로 선정

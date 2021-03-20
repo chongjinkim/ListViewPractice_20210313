@@ -23,11 +23,11 @@ class MainActivity : AppCompatActivity() {
 //        학생 목록을 실제로 추가
 
 
-        mStudentList.add(Student("에르난데스", 1988))
-        mStudentList.add(Student("파블로", 1995))
-        mStudentList.add(Student("안드리", 1990))
-        mStudentList.add(Student("클라우디오", 1991))
-        mStudentList.add(Student("조르지오", 1993))
+        mStudentList.add(Student("에르난데스", 1988, "이탈리아 로마"))
+        mStudentList.add(Student("파블로", 1995, "이탈리아 밀라노"))
+        mStudentList.add(Student("안드리", 1990, "이탈리아 토리노"))
+        mStudentList.add(Student("클라우디오", 1991, "이탈리아 피렌체"))
+        mStudentList.add(Student("조르지오", 1993, "이탈리아 아탈란타"))
 
 //      미뤄뒀던 mAdapter의 대입 진행
 
