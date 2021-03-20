@@ -50,6 +50,10 @@ class StudentAdaptor(
         val nameTxt = row.findViewById<TextView>(R.id.nameTxt)
         val ageTxt = row.findViewById<TextView>(R.id.ageTxt)
 
+//   실제 데이터 UI 반영
+        nameTxt.text = studentData.name
+        ageTxt.text = "(${studentData.birthYear}세)"
+
 
 //        완성된 ROW가 화면에 뿌려질 결과로 선정
 
