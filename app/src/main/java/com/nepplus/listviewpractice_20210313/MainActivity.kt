@@ -1,8 +1,10 @@
 package com.nepplus.listviewpractice_20210313
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.nepplus.listviewpractice_20210313.adaptors.StudentAdaptor
 import com.nepplus.listviewpractice_20210313.datas.Student
 import kotlinx.android.synthetic.main.activity_main.*
@@ -54,6 +56,22 @@ class MainActivity : AppCompatActivity() {
 //        리스트뷰 아이템 길게 눌렀을 때 별도 처리
 
         studentListView.setOnItemLongClickListener { parent, view, position, id ->
+//            우선 경고(확인) 창 띄워보자 => 확인이 눌렀을 때 삭제 진행
+            val alert = AlertDialog.Builder(this)
+            alert.setTitle("학생 삭제")
+            alert.setMessage("정말 학생을 삭제하시겠습니까")
+            alert.setPositiveButton("확인", DialogInterface.OnClickListener { dialog, which ->
+//                     확인 버튼이 눌렀을 때 실행 해줄 일
+//                학생 삭제는 이 때 진행
+                mStudentList.removeAt(position)
+
+                mAdaptor.notifyDataSetChanged()
+
+            })
+
+            alert.setNegativeButton("취소", null)
+
+            alert.show()
 
 // 롱클릭된 학생 목록에서 삭제
 
