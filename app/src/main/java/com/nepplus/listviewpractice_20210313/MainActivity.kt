@@ -50,5 +50,17 @@ class MainActivity : AppCompatActivity() {
 
             Toast.makeText(this, clickedStudent.name, Toast.LENGTH_SHORT).show()
         }
+
+//        리스트뷰 아이템 길게 눌렀을 때 별도 처리
+
+        studentListView.setOnItemLongClickListener { parent, view, position, id ->
+
+            val clickedStudent = mStudentList[position]
+
+            Toast.makeText(this, "$(clickedStudent.name) 길게 눌림", Toast.LENGTH_SHORT).show()
+
+
+            return@setOnItemLongClickListener true
+        }
     }
 }
