@@ -34,6 +34,13 @@ class StudentAdaptor(
 
         }
 
+//        tempRow는 절대 null이 아닐 것이다 -> 무조건 결과로 나가도 된다
+
+        val row = tempRow!!
+
+//        완성된 ROW가 화면에 뿌려질 결과로 선정
+
+        return row
 
     }
 }
